@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My hello world page</title>
+    <link rel="manifest" href="manifest.json" />
+  </head>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+    }
+  </style>
+  <body>
+    <h1 class="vertical-container">Hello Earthlings</h1>
+    <button id="change">Change background</button>
+  </body>
+  <script src="/public/sw.js"></script>
+  <script>
+    document.getElementById("change").addEventListener("click", function () {
+      var red = Math.floor(Math.random() * 255);
+      var green = Math.floor(Math.random() * 255);
+      var blue = Math.floor(Math.random() * 255);
+      document.body.style.backgroundColor = `rgb(${red},${blue},${green}`;
+    });
+  </script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js").then(function () {
+        console.log("Service Worker Registered");
+      });
+    }
+  </script>
+</html>
