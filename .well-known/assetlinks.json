@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.example.demotwa",
+      "sha256_cert_fingerprints": [
+        "BD:5B:6B:D4:0C:5E:0D:4C:61:46:53:30:5C:E6:C7:CE:2A:75:1C:79:93:7C:BC:FF:CC:92:A8:0A:57:81:9E:99"
+      ]
+    }
+  }
+]
